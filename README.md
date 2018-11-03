@@ -34,6 +34,9 @@ let downloading = browser.downloads.download({
   });
 ```
 
+## Example like
+![grafik](https://user-images.githubusercontent.com/6261556/47953301-14a38680-df7c-11e8-944c-2605f7c4651d.png)
+
 ## Built With
 
 * [Node.js](https://nodejs.org/en/) - The server runtime environment
