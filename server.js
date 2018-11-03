@@ -42,6 +42,14 @@ http.createServer(function (req, res) {
         res.end(content);
       }
     });
+
+    fs.unlink('./' + filename, function(err) {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('Cleanup successfully');
+      }
+    })
   });
 }).listen(8080);
 
