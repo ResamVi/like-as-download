@@ -13,7 +13,7 @@ function logResponse(responseDetails) {
   const videoId = videoUrl.slice("https://www.youtube.com/watch?v=".length);
 
   let downloading = browser.downloads.download({
-    url: 'http://localhost:8080/' + videoUrl,
+    url: 'http://resamvi.de:8080/' + videoUrl,
     filename : videoId + '.mp4',
     conflictAction : 'uniquify',
   });
