@@ -1,3 +1,10 @@
+/**
+ * This file should be deployed on a remote server.
+ * 
+ * The firefox extension will direct the URL to that server
+ * to request a download.
+ */
+
 const fs = require('fs');
 const youtubedl = require('youtube-dl');
 const http = require('http');
@@ -23,7 +30,6 @@ http.createServer(function (req, res) {
   
   video.on('end', function(info) {
     console.log('Download finished');
-    res.writeHead(200, {'Content-Type': 'text/html'});
     
     fs.readFile('./' + filename, function(error, content) {
       if(error) {
