@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "like-as-download",
+  "version": "0.1",
+
+  "description": "The youtube like button will serve as a download button as well.",
+
+  "icons": {
+    "48": "icon.png"
+  },
+
+  "permissions": [
+    "*://localhost/*",
+    "https://www.youtube.com/service_ajax?name=likeEndpoint",
+    "downloads",
+    "webRequest"
+  ],
+
+  "background": {
+    "scripts": ["extension.js"]
+  }
+}
