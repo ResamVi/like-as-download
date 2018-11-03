@@ -1,0 +1,10 @@
+{
+  "name": "like-as-download",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Julien Midedji <Julien.Midedji@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "youtube-dl": "^1.12.2"
+  }
+}
