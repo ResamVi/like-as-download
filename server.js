@@ -35,10 +35,6 @@ http.createServer(function (req, res) {
       if(error) {
         console.log(error);
       } else {
-        res.writeHead(200, { 
-          'Content-Type': 'video/mp4',
-          'Content-disposition': 'attachment; filename="' + filename + '"',
-        });
         res.end(content);
       }
     });
