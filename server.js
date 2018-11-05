@@ -28,6 +28,10 @@ http.createServer(function (req, res) {
     video.pipe(fs.createWriteStream(info._filename));
   });
   
+  video.on('error', function error(err) {
+    console.log('ERROR:', err);
+  });
+  
   video.on('end', function(info) {
     console.log('Download finished');
     
