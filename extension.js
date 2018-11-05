@@ -8,6 +8,10 @@ function onFailed(error) {
   console.log(`Download failed: ${error}`);
 }
 
+function clean(str) {
+  return str.replace(/^[^a-z]+|[^\w:.-\s]+/gi, "");
+}
+
 function download(request) {
   
   let metadata = JSON.parse(request.requestBody.formData.sej).likeEndpoint;
@@ -24,7 +28,7 @@ function download(request) {
         // Send request to download server who will download for us and serve the result.
         let downloading = browser.downloads.download({
           url: 'http://resamvi.de:8080/' + videoUrl,
-          filename : video.title + '.mp4',
+          filename : clean(video.title) + '.mp4',
           conflictAction : 'uniquify',
         });
         
