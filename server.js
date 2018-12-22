@@ -17,7 +17,7 @@ http.createServer(function (req, res) {
   
   // format 18 is mp4
   const url = req.url.slice(1);
-  const video = youtubedl(url, ['--format=18'], { cwd: __dirname });
+  const video = youtubedl(url, ['--format=best'], { cwd: __dirname });
   let filename;
   
   video.on('info', function(info) {
