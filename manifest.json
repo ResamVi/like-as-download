@@ -10,13 +10,13 @@
   },
 
   "permissions": [
-    "http://resamvi.de:8080/",
+    "http://resamvi.io:8080/",
     "https://www.youtube.com/service_ajax?name=likeEndpoint",
     "downloads",
     "webRequest"
   ],
 
   "background": {
-    "scripts": ["extension.js"]
+    "scripts": ["chrome.js"]
   }
 }
