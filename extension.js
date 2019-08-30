@@ -27,7 +27,7 @@ function download(request) {
         
         // Send request to download server who will download for us and serve the result.
         let downloading = browser.downloads.download({
-          url: 'http://resamvi.de:8080/' + videoUrl,
+          url: 'http://resamvi.io:8080/' + videoUrl,
           filename : clean(video.title) + '.mp4',
           conflictAction : 'uniquify',
         });
